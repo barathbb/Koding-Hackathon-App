@@ -4,24 +4,24 @@ package com.app.util;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 
-
 public class Areas {
+	
 	public static Areas area = null;
 	public static ArrayList areaString;
 	public static ArrayList codeString;
+	
 	public static Areas getInstance()throws Exception{
 		if(area == null){
 			area = new Areas();
 		}
 		return area;
 	}
+	
 	private Areas() throws FileNotFoundException, IOException{
 		load();
 	}
@@ -38,8 +38,8 @@ public class Areas {
 		while((s = br.readLine()) != null) { 
 			areaString.add(s.substring(0, s.indexOf("-")-1)); 
 		} 
-	fis = getClass().getResourceAsStream("Areas.txt");
-	br = new BufferedReader(new InputStreamReader(fis)); 
+		fis = getClass().getResourceAsStream("Areas.txt");
+		br = new BufferedReader(new InputStreamReader(fis)); 
 		
 		while((s = br.readLine()) != null) { 
 			codeString.add(s.substring(s.lastIndexOf("-")+2)); 
@@ -48,15 +48,14 @@ public class Areas {
 	} 
 	
 	public String getArea(){
+		
 		String areaHTML="";
 		for(int i =0;i<areaString.size();i++)
-		areaHTML+="<li value='"+codeString.get(i)+"'>"+areaString.get(i)+"</li>";
+			areaHTML += "<li value='"+codeString.get(i)+"'>"+areaString.get(i)+"</li>";
 		return areaHTML;
 	}
 	
-	
-	
-	}
+}
 	
 	
 	
