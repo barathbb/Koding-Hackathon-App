@@ -11,7 +11,7 @@
 
   <body>
     <div class="container">
-      <h2>Vertical (basic) Form</h2>
+      <h2>Login Page</h2>
       <form role="form">
         <div class="form-group">
           <label for="email">Email:</label>
