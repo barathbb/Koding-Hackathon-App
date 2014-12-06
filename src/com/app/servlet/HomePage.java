@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.app.util.DBConnectionUtil;
+import com.app.util.DBUtil;
 import com.mysql.jdbc.Connection;
 
 public class HomePage extends HttpServlet {
@@ -22,10 +22,7 @@ public class HomePage extends HttpServlet {
 			throws ServletException, IOException {
 		super.doPost(req, resp);
 
-		Connection conn = DBConnectionUtil.getDBConnection(req.getSession());
-		
-		req.getSession().setAttribute("conn", conn);
-		
+		Connection conn = (Connection) DBUtil.getConnection();
 	}
 	
 	/* (non-Javadoc)
