@@ -1,4 +1,5 @@
 
+CREATE SCHEMA `KodingApp`;
 
 CREATE TABLE `KodingApp`.`Users` (
   `UserId` INT NOT NULL AUTO_INCREMENT,
