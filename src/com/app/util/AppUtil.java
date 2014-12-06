@@ -2,14 +2,11 @@ package com.app.util;
 
 import java.sql.ResultSet;
 
+import com.app.component.User;
 import com.mysql.jdbc.PreparedStatement;
 
 public class AppUtil {
 	
-	public static void main(String[] args) {
-		
-	}
-
 	public static int checkForUserAvailability(String email, String password) throws Exception {
 		
 		int loginState = 0;
@@ -33,6 +30,16 @@ public class AppUtil {
 		}
 		
 		return loginState;
+	}
+
+	public static User getUserForSession(String email) throws Exception{
+		
+		PreparedStatement pre = QueryUtil.getUserTableSelectWithEmailEquals(email);
+		
+		ResultSet rs = pre.executeQuery();
+		
+		return ComponentUtil.fillUser(rs);
+		
 	}
 
 }
