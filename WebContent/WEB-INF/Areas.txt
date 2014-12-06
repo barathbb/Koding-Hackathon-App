@@ -1,0 +1,187 @@
+Chennai GPO	--------	600 001
+Anna Road GPO	--------	600 002
+Park Town	--------	600 003
+Mylapore	--------	600 004
+Triplicane	--------	600 005
+Greams Road	--------	600 006
+Vepery	--------	600 007
+Egmore	--------	600 008
+Fort St George	--------	600 009
+Kilpauk	--------	600 010
+Perambur	--------	600 011
+Perambur Barracks	--------	600 012
+Royapuram	--------	600 013
+Royapettah	--------	600 014
+Saidapet	--------	600 015
+St.Thomas Mount	--------	600 016
+T.Nagar	--------	600 017
+Teynampet	--------	600 018
+Tiruvottiyur	--------	600 019
+Adyar	--------	600 020
+Washermenpet	--------	600 021
+Raj Bhavan	--------	600 022
+Ayanavaram	--------	600 023
+Kodambakkam	--------	600 024
+Guindy Engineering College	--------	600 025
+Vadapalani	--------	600 026
+Meenambakkam	--------	600 027
+Raja Annamalaipuram	--------	600 028
+Aminjikarai	--------	600 029
+Shenoynagar	--------	600 030
+Chetput HO	--------	600 031
+Industrial Estate Guindy	--------	600 032
+West Mambalam	--------	600 033
+Nungambakkam	--------	600 034
+Nandanam	--------	600 035
+Indian Institute of Technology	--------	600 036
+Officers' Training School	--------	600 037
+ICF Colony	--------	600 038
+Vyasarpadi	--------	600 039
+Annanagar	--------	600 040
+Thiruvanmiyur	--------	600 041
+Velacheri	--------	600 042
+Pallavaram	--------	600 043
+Chromepet	--------	600 044
+Tambaram HO	--------	600 045
+Tambaram IAF	--------	600 046
+Tambaram Sanatorium	--------	600 047
+Vandalur	--------	600 048
+Villivakkam	--------	600 049
+Padi	--------	600 050
+Madhavaram Milk Colony	--------	600 051
+Red Hills	--------	600 052
+Ambattur HO	--------	600 053
+Avadi Camp HO	--------	600 054
+Avadi IAF	--------	600 055
+Poonamallee	--------	600 056
+Ennore Thermal	--------	600 057
+Ambattur Industrial Estate	--------	600 058
+Tambaram East	--------	600 059
+Madhavaram	--------	600 060
+Nanganallur	--------	600 061
+Satyamurthinagar	--------	600 062
+Srinivasanagar	--------	600 063
+Chitlapakkam	--------	600 064
+CRP Gmp Avadi	--------	600 065
+Pozhal	--------	600 066
+Sholavaram	--------	600 067
+Manali	--------	600 068
+Kunrathur(Kanchi Dt)	--------	600 069
+Anakaputhur	--------	600 070
+Kamarajanagar -------- 600 071
+Pattabiram -------- 600 072
+Selaiyur -------- 600 073
+Pozhichalur -------- 600 074
+Pammal -------- 600 075
+Korattur RS -------- 600 076
+Thiruverkadu -------- 600 077
+KK Nagar -------- 600 078
+Sowcarpet -------- 600 079
+Korattur -------- 600 080
+Tondiarpet -------- 600 081
+Jawahar Nagar/Agaram -------- 600 082
+Ashok Nagar -------- 600 083
+Flowers Road -------- 600 084
+Kotturpuram -------- 600 085
+Gopalapuram -------- 600 086
+Alwarthirunagar -------- 600 087
+Adambakkam -------- 600 088
+Nandambakkam -------- 600 089
+Besantnagar -------- 600 090
+Madipakkam -------- 600 091
+Virugambakkam -------- 600 092
+Saligramam -------- 600 093
+Choolaimedu -------- 600 094
+Jaffarkhanpet -------- 600 095
+Perungudi -------- 600 096
+Ekkaduthangal -------- 600 097
+SIDCO Estate -------- 600 098
+Kolathur/CPT -------- 600 099
+Medavakkam -------- 600 100
+Annananagar W. Ext. -------- 600 101
+Annanagar E. Ext. -------- 600 102
+Manali New Town -------- 600 103
+High Court Buildings -------- 600 104
+Commander-in-Chief -------- 600 105
+Arumbakkam -------- 600 106
+Koyambedu -------- 600 107
+Broadway -------- 600 108
+Railway Car Shed -------- 600 109
+Ponniammanmedu -------- 600 110
+Ayappannagar -------- 600 111
+Choolai -------- 600 112
+Tharamani -------- 600 113
+Pazhavanthangal -------- 600 114
+Madras University -------- 600 115
+Porur -------- 600 116
+Keelakattalai -------- 600 117
+Kodungaiyur -------- 600 118
+Sholinganallur -------- 600 119
+Nandiambakkam -------- 600 120
+Mangadu -------- 600 122
+Sembarambakkam/Nazarethpettai -------- 600 123
+Puduchatram -------- 600 124
+Mugalivakkam/Manapakkam -------- 600 125
+Sithalapakkam -------- 600 126
+Melakkottaiyur -------- 600 127
+Thandalam/Kovur -------- 600 128
+Kovilambakkam -------- 600 129
+Navalur -------- 600 130
+Principal Chief Postmaster General -------- 600 201
+Chief General Manager BSNL -------- 601 202
+Minjur -------- 601 203
+Ponnery -------- 601 204
+Pulicat -------- 601 205
+Kaverapetai -------- 601 206
+Arambakkam(rs) -------- 601 207
+Tirupalaivanan -------- 601 208
+Thirumullaivoyal -------- 601 209
+Perumbedu -------- 601 210
+Elavur -------- 601 211
+Iguvan Palayam -------- 601 212
+Jothi nagar -------- 601 213
+Devampattu -------- 601 214
+Director of Medical Services -------- 601 215
+Director of Public Health -------- 601 216
+Staff Selection Commission -------- 601 217
+Teachers Recruitment Board -------- 601 218
+US Consulate, Chennai -------- 601 219
+Commissioner of Police -------- 601 220
+Integrated Enterprises, Chennai -------- 601 221
+Accountant General Office, Chennai -------- 601 223
+World Vision, Chennai -------- 601 224
+Jesus calls, Chennai -------- 601 225
+HSBC Card production Division, Chennai -------- 601 226
+Bharti Airtel Ltd, Chennai -------- 601 227
+Income Tax Department, Chennai -------- 601 228
+Central Excise, Chennai -------- 601 229
+Institute of Charted Accountants, Chennai -------- 601 230
+Padappai -------- 601 301
+Gowrivakkam -------- 601 302
+Old pallavaram -------- 601 303
+Tiruvallur -------- 602 001
+Manavalanagar -------- 602 002
+Kakalur Ind Estate -------- 602 003
+Kilanur -------- 602 021
+Poondi/Nambakkam -------- 602 023
+Thiruninravur -------- 602 024
+Pakkam -------- 602 025
+Mambakkam/Uttukottai -------- 602 026
+Palavakkam -------- 602 028
+Mangadu -------- 602 101
+Vellavedu -------- 602 103
+Nemam -------- 602 107
+Kelambakkam / Padur -------- 603 103
+Mamallapuram -------- 603 104
+Sirudavur -------- 602 105
+Tiruvanaikoil -------- 602 106
+Olaiyur -------- 602 107
+Hanumanthapuram / Sembakkam -------- 602 108
+Tirukalikundram / Oragadam -------- 602 109
+Mamandur / Manapakkam -------- 602 111
+Muttukadu / Kovalam -------- 602 112
+Elapakkam -------- 602 201
+Guduvanchery -------- 602 202
+Kattankolathur -------- 602 203
+Singaperumalkoil -------- 602 204
+Urapakkam -------- 602 210
