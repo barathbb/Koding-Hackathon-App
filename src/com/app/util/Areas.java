@@ -47,16 +47,11 @@ public class Areas {
 	public String getArea(){
 		String areaHTML="";
 		for(int i =0;i<areaString.size();i++)
-		areaHTML+="<li value='"+areaString.get(i)+"'>"+areaString.get(i)+"</li>";
+		areaHTML+="<li value='"+codeString.get(i)+"'>"+areaString.get(i)+"</li>";
 		return areaHTML;
 	}
 	
-	public String getCode(){
-		String areaHTML="";
-		for(int i =0;i<areaString.size();i++)
-		areaHTML+="<li id="+areaString.get(i)+"value="+areaString.get(i)+">"+areaString.get(i)+"</li>";
-		return areaHTML;
-	}
+	
 	
 	}
 	
