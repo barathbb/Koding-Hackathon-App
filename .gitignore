@@ -1,8 +1,13 @@
 /build/
 
 
+syntax: glob
 .classpath
-
+syntax: glob
+.hgignore
+syntax: glob
 .project
-
-.settings
+syntax: glob
+org.eclipse.jdt.core.prefs
+syntax: glob
+org.eclipse.wst.common.project.facet.core.xml
