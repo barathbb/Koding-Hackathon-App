@@ -31,18 +31,18 @@
           <input type="password" class="form-control" id="repwd" placeholder="Enter password again" name="password">
         </div>
         
-        <div class="btn-group">
-  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-    Choose Your Area
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" id="area">
-    <!-- dropdown menu links -->
-<%=Areas.getInstance().getArea() %>
-  </ul>
-</div>
         
+
+<div class="form-group">
+          <label for="sel1">Choose Your Area</label>
+          <select class="form-control" id="area">
+           <%=Areas.getInstance().getArea() %>
+          </select>
+          
+</div>
+        <div class="form-group">
         <button type="submit" class="btn btn-default">Submit</button>
+        </div>
       </form>
       </form>
       </div>

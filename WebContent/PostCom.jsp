@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="container">
-<h2>Registration Page</h2>
+<h2>Compliant Page</h2>
       <form role="form">
 
       <form role="form" method="post">
@@ -21,21 +21,32 @@
           <input type="text" class="form-control" id="email" placeholder="Enter Your Name" name="username">
         </div>
         <div class="form-group">
-          <label for="description">Text Area</label>
+          <label for="description">Compliant Description</label>
     	<textarea class="form-control" rows="3"></textarea>
-        </div>        
-        <div class="btn-group">
-  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-    Choose Area
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" id="area">
-    <!-- dropdown menu links -->
-<%=Areas.getInstance().getArea() %>
-  </ul>
-</div>
+        </div>   
         
+         <div class="form-group">
+          <label for="description">Upload Image</label>
+     <input type="file"  id="file">
+        </div> 
+        
+        <div class="form-group">
+          <label for="sel1">Department</label>
+          <select class="form-control" id="area">
+           <%=Areas.getInstance().getArea() %>
+          </select>     
+      </div>
+<div class="form-group">
+          <label for="sel1">Compliant Area</label>
+          <select class="form-control" id="area">
+           <%=Areas.getInstance().getArea() %>
+          </select>
+          
+</div>
+        <div class="form-group">
         <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+
       </form>
       </form>
       </div>  <script src="bootstrap/js/jquery.min.js"></script>
