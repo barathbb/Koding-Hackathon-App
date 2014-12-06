@@ -4,18 +4,21 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpSession;
+
 import com.mysql.jdbc.Connection;
 
 public class DBConnectionUtil {
 	
-	public static void initDB(){
+	public static Connection initDB(){
 		
-		Statement stmt;Connection conn;
+		Statement stmt; Connection conn = null;
 		
 		try{
 		      Class.forName("com.mysql.jdbc.Driver");
 
-		      String DB_URL = "";
+		      String DB_URL = "jdbc:mysql://localhost/KodingApp";
 		      String USER = "";
 		      String PASS = "";
 		      
@@ -45,18 +48,30 @@ public class DBConnectionUtil {
 //		      rs.close();
 		      stmt.close();
 		      conn.close();
-		   }catch(SQLException se){
-		      //Handle errors for JDBC
-		      se.printStackTrace();
 		   }catch(Exception e){
-		      //Handle errors for Class.forName
 		      e.printStackTrace();
 		   }finally{
-		      //finally block used to close resources
 		   }
 		   System.out.println("Goodbye!");
+		   
+		   return conn;
+		   
 	}
 	
+	
+	public static Connection getDBConnection(HttpSession session){
+		
+		Connection conn = null;
+		
+		conn = (Connection) session.getAttribute("conn");
+		
+		if(conn == null){
+			conn = initDB();
+		}
+		
+		return conn;
+		
+	}
 	
 	
 }
