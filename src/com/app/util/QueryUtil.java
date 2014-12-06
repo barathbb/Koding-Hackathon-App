@@ -15,5 +15,17 @@ public class QueryUtil {
 		pre.setString(1, email);
 		return pre;
 	}
+	
+	public static PreparedStatement getPostTable() throws Exception{
+		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("select * from posts");
+		return pre;
+	}
+	
+	public static PreparedStatement getPostTableWithPostIdEquals(long postid) throws Exception{
+		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("select * from posts where postid = ?");
+		pre.setLong(1, postid);
+		return pre;
+	}
+	
 
 }

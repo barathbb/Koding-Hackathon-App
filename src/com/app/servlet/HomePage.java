@@ -1,6 +1,7 @@
 package com.app.servlet;
 
 import java.io.IOException;
+import java.sql.ResultSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -8,7 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.util.DBUtil;
+import com.app.util.QueryUtil;
 import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
 
 public class HomePage extends HttpServlet {
 	
@@ -21,8 +24,19 @@ public class HomePage extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		super.doPost(req, resp);
+		
+		try{
+		PreparedStatement pre = QueryUtil.getPostTable();
+		
+		ResultSet rs = pre.executeQuery();
+		
+		
+		}
+		catch(Exception e){
+			
+		}
+		
 
-		Connection conn = (Connection) DBUtil.getConnection();
 	}
 	
 	/* (non-Javadoc)
