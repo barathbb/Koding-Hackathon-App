@@ -1,6 +1,9 @@
 /*$Id$*/
 package com.app.util;
 
+import com.app.component.Post;
+import com.app.component.User;
+import com.app.util.AppConstants.PostState;
 import com.app.util.AppConstants.Users;
 import com.mysql.jdbc.PreparedStatement;
 
@@ -45,13 +48,36 @@ public class QueryUtil {
 		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("insert into users(UserName,EmailId,Password,Role,Locality) values (?,?,?,?,?)");
 		pre.setString(1, username);
 		pre.setString(3, password);
-		pre.setInt(4, Users.END_USER.getIntValue());
+		pre.setInt(4, Users.END_USER.getIntValue());/**Constant since only end users can create**/
 		pre.setString(5, locality);
 		pre.setString(2, email);
 //		pre.setLong(1, status);
 		return pre;
 	}
 
+	public static PreparedStatement getAddPostQuery(String title, String description, String image, String locality, long department, long ownerid) throws Exception {
+		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("insert into Posts(PostTitle,PostDescription,Image,Locality,Department,OwnerId, Status) values (?,?,?,?,?,?,?)");
+		pre.setString(1, title);
+		pre.setString(2, description);
+		pre.setString(3, image);
+		pre.setString(4, locality);
+		pre.setLong(5, department);
+		pre.setLong(6, ownerid);
+		pre.setInt(7, PostState.CREATED.getState());
+		return null;
+	}
+	
+	public static PreparedStatement getUpdatePostQuery(String title, String description, String image, String locality, long department, long postid) throws Exception {
+		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("update Posts set PostTitle = ? ,PostDescription = ? ,Image = ?, Locality = ? ,Department = ?) where PostId = ?");
+		pre.setString(1, title);
+		pre.setString(2, description);
+		pre.setString(3, image);
+		pre.setString(4, locality);
+		pre.setLong(5, department);
+		pre.setLong(6, postid);
+		return null;
+	}
+	
 	public static PreparedStatement getUsersTableWithUserNameEquals(String username)  throws Exception {
 		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("select * from users where UserName = ?");
 		pre.setString(1, username);

@@ -25,7 +25,7 @@
           <label for="pwd">Password:</label>
           <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
         </div>
-        <div class="checkbox">
+        <div class="checkbox" style="display:none;">
           <label><input type="checkbox"> Remember me</label>
         </div>
         <button type="button" id="login" class="btn btn-default">Submit</button>

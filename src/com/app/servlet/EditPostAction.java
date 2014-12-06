@@ -7,12 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.app.component.User;
 import com.app.util.QueryUtil;
 
-public class CreatePostAction extends HttpServlet {
+public class EditPostAction extends HttpServlet {
 
-	private static final long serialVersionUID = 972033247937295400L;
+	private static final long serialVersionUID = 2364336514652454695L;
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
@@ -44,16 +43,19 @@ public class CreatePostAction extends HttpServlet {
 		
 		String locality = (String) req.getParameter("locality");
 		
-		long department = Long.parseLong(req.getParameter("department"));
+		long department = Long.valueOf(req.getParameter("department"));
 		
-		QueryUtil.getAddPostQuery(title, description, image, locality, department, ((User)req.getSession().getAttribute("user")).getUserID()).execute();
+		long postid = Long.parseLong(req.getParameter("postid"));
 		
-		resp.sendRedirect("/postcreated.jsp");
+		QueryUtil.getUpdatePostQuery(title, description, image, locality, department, postid).execute();
+		
+		resp.sendRedirect("/postupdated.jsp");
 		
 		}
 		catch(Exception e){
 			e.printStackTrace();
 		}
+		
 	}
 	
 }
