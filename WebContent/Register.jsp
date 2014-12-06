@@ -52,10 +52,7 @@
     <script type="text/javascript">
     
     $('#name').bind('blur',function(){
-    	
     	var input = $(this);
-    	
-    	try{
     	$.ajax({
 			url 		: "/CheckUserName",
 			type 		: 'GET',
@@ -66,8 +63,6 @@
 			data		: 'username=' + $(this).val(),
 		    success		: function(response, status, xhr)
 		    			  {
-		    					console.log(response);
-		    	
 		    					if(response === "True")
 		    					{
 		    						$(input).css('border','2px green solid');
@@ -76,32 +71,31 @@
 		    					{
 		    						$(input).css('border','2px red solid');
 		    					}
-		    					
-// 						    	var newOpt = document.createElement('option');
-// 						    	var dataObj = toJSONObject(this.data);
-// 						    	$(newOpt).text(dataObj.name);
-// 								$(newOpt).val(response.TASK_NAME);
-// 								$(self.wrapper).parent().find('select[name=tasks]').append(newOpt);
-				
-// 		    					var newTaskRow = $(self.wrapper).find('.rules_associate_tasks .templaterow').clone();
-// 		    					$(newTaskRow).removeAttr('class').show().attr('id',response.TASK_NAME);
-// 		    					$(newTaskRow).find('input[type=checkbox]').attr('checked','checked').attr('id','task_'+response.TASK_NAME).next().attr('for','task_'+response.TASK_NAME);
-		    					
-// 		    					Events.updateDetailsOnTaskRow(newTaskRow, self.wrapper, dataObj);
-// 		    					$(self.wrapper).find('.rules_associate_tasks table tbody').append(newTaskRow);
-// 		    					if(Events.assoicateSelectedTasks())
-// 		    					{
-// 		    						Events.showAssociatedTasksList();
-// 		    					}
-// 		    					$(self.TB.taskBuilder).find('.task-setvalue').replaceWith($(cloneDiv).clone(true));
-// 		    					self.TB.usedFields = [];
-// 		    					Events.toggleAssociateTaskLink();
 		    			  }
 		});
-    	
-    	}
-    	catch(e){console.log(e);}
-    	
+    });
+    $('#email').bind('blur',function(){
+    	var input = $(this);
+    	$.ajax({
+			url 		: "/CheckEmailId",
+			type 		: 'GET',
+			beforeSend 	: function()
+						  {
+// 							this.data = "username=" + $(this).val();
+						  },
+			data		: 'emailid=' + $(this).val(),
+		    success		: function(response, status, xhr)
+		    			  {
+		    					if(response === "True")
+		    					{
+		    						$(input).css('border','2px green solid');
+		    					}
+		    					else
+		    					{
+		    						$(input).css('border','2px red solid');
+		    					}
+		    			  }
+		});
     });
     
     

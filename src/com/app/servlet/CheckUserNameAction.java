@@ -1,6 +1,7 @@
 package com.app.servlet;
 
 import java.io.IOException;
+import java.io.Writer;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,18 +25,22 @@ public class CheckUserNameAction extends HttpServlet {
 		
 		String username = (String) req.getParameter("username");
 		
+		boolean exists = Boolean.FALSE;
+		
 		try{
 		
 		PreparedStatement pre = QueryUtil.getUsersTableWithUserNameEquals(username);
 		
-		boolean exists = pre.executeQuery() != null;
+		 exists = pre.executeQuery() != null;
 		
 		}
 		catch(Exception e){
 			
 		}
 		
-		resp.getWriter().write("True");
+		Writer out = resp.getWriter();
+		
+		out.write( exists ? "False" : "True" ); /** The text value is used for validation **/
 		
 	}
 	

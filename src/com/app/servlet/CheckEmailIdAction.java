@@ -1,6 +1,7 @@
 package com.app.servlet;
 
 import java.io.IOException;
+import java.io.Writer;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -18,36 +19,29 @@ public class CheckEmailIdAction extends HttpServlet {
 	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		super.doPost(req, resp);
 		
-		String email = (String) req.getParameter("email");
+		String email = (String) req.getParameter("emailid");
+		
+		boolean exists = Boolean.FALSE;
 		
 		try{
 		
 		PreparedStatement pre = QueryUtil.getUsersTableWithEmailIdEquals(email);
 		
-		boolean exists = pre.executeQuery() != null;
+		exists = pre.executeQuery() != null;
 		
 		}
 		catch(Exception e){
 			
 		}
 		
-	}
-	
-	/* (non-Javadoc)
-	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
-	 */
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doGet(req, resp);
+		Writer out = resp.getWriter();
 		
-		doPost(req, resp);
+		out.write( exists ? "False" : "True" ); /** The text value is used for validation **/
+		
 	}
 
 }

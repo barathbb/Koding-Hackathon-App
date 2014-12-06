@@ -45,7 +45,7 @@
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>CheckEmailIdAction</servlet-name>
+    <servlet-name>CheckEmailId</servlet-name>
     <url-pattern>/CheckEmailIdAction</url-pattern>
   </servlet-mapping>
   
