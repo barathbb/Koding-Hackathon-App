@@ -26,7 +26,7 @@
           <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
         </div>
         <div class="form-group">
-          <label for="pwd">CRepeat Password:</label>
+          <label for="pwd">Repeat Password:</label>
           <input type="password" class="form-control" id="repwd" placeholder="Enter password again" name="password">
         </div>
         
