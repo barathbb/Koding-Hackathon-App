@@ -35,10 +35,15 @@ public class AppUtil {
 	public static User getUserForSession(String email) throws Exception{
 		
 		PreparedStatement pre = QueryUtil.getUserTableSelectWithEmailEquals(email);
-		
 		ResultSet rs = pre.executeQuery();
 		
 		return ComponentUtil.fillUser(rs);
+	}
+
+	public static void updatePostStatus(User loginUser, long postID, int toStatus) throws Exception {
+		
+		PreparedStatement pre = QueryUtil.getUpdatePostSetStatusWithPostID(toStatus, postID); 
+		pre.execute();
 		
 	}
 
