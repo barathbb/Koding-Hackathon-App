@@ -30,6 +30,16 @@
           <input type="password" class="form-control" id="repwd" placeholder="Enter password again" name="password">
         </div>
         
+        <div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Action
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <!-- dropdown menu links -->
+  </ul>
+</div>
+        
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       </form>
