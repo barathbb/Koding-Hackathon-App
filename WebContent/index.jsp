@@ -2,18 +2,18 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    
   </head>
 
   <body>
     <div class="container">
 
       <h2>Login Page</h2>
-      <form role="form">
 
       <form role="form" method="post">
 
@@ -28,11 +28,31 @@
         <div class="checkbox">
           <label><input type="checkbox"> Remember me</label>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="button" id="login" class="btn btn-default">Submit</button>
       </form>
     </div>
+    
+    
 
     <script src="bootstrap/js/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    
+    $('#login').click(function(){
+    	if($('#email').val() === "")
+    	{
+    		alert("Email can't be empty");
+    		return false;
+    	}
+    	if($('#pwd').val() === "")
+    	{
+    		alert("Password can't be empty");
+    		return false;
+    	}
+    	$('form').submit();
+    	
+    });
+    
+    </script>
   </body>
 </html>

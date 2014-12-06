@@ -34,6 +34,12 @@ public class QueryUtil {
 		pre.setInt(1, toStatus);
 		return pre;
 	}
+
+	public static PreparedStatement getPostTableWithStatusEquals(int status)  throws Exception {
+		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("select * from posts where status = ?");
+		pre.setLong(1, status);
+		return null;
+	}
 	
 
 }

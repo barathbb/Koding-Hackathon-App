@@ -6,7 +6,6 @@ public class AppConstants {
 	public static final int WRONG_PASSW0RD = 2;
 	public static final int VALID_USER = 3;
 	
-	
 	public enum Users{
 		
 		SUPER_ADMIN(1),
@@ -25,7 +24,12 @@ public class AppConstants {
 			return type;
 		}
 		
+		public Users getUser(){
+			return this;
+		}
+		
 	}
+	
 	
 	public enum PostState{
 		
@@ -48,3 +52,14 @@ public class AppConstants {
 	}
 	
 }
+
+class UserConstants{
+	
+	public static final int SUPER_ADMIN = 1;
+	public static final int REVIEWER = 2;
+	public static final int DEPARTMENT_ADMIN = 3;
+	public static final int DEPARTMENT_WORKER = 4;
+	public static final int END_USER = 5;
+}
+
+
