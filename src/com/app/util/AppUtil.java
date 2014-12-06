@@ -4,7 +4,6 @@ import java.sql.ResultSet;
 
 import com.app.component.User;
 import com.app.util.AppConstants.PostState;
-import com.app.util.AppConstants.Users;
 import com.mysql.jdbc.PreparedStatement;
 
 public class AppUtil {

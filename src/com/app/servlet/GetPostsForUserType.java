@@ -1,7 +1,7 @@
-/*$Id$*/
 package com.app.servlet;
 
 import java.io.IOException;
+import java.sql.ResultSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,8 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.component.User;
 import com.app.util.AppUtil;
+import com.app.util.ComponentUtil;
+import com.app.util.QueryUtil;
+import com.mysql.jdbc.PreparedStatement;
 
 public class GetPostsForUserType extends HttpServlet{
+
+	private static final long serialVersionUID = -7221212623591047395L;
+
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
@@ -39,11 +45,31 @@ public class GetPostsForUserType extends HttpServlet{
 		
 			int requiredStatus = AppUtil.getPostStatusForUser(loginUser);
 			
+			PreparedStatement pre;
 			
+			
+			switch (requiredStatus) {
+			case -1:
+				pre = QueryUtil.getPostTable();
+				break;
+				
+			case 0:
+				pre = null;
+				resp.sendRedirect("error");
+				break;
+				
+			default:
+				pre = QueryUtil.getPostTableWithStatusEquals(requiredStatus);
+				break;
+			}
+			
+			ResultSet rs = pre.executeQuery();
+			
+			req.setAttribute("posts", ComponentUtil.fillPosts(rs));
 			
 		}
 		catch(Exception e){
-			
+			e.printStackTrace();
 		}
 		
 	}
