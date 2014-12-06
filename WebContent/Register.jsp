@@ -1,3 +1,4 @@
+<%@ page import="com.app.util.Areas" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -35,8 +36,10 @@
     Action
     <span class="caret"></span>
   </a>
-  <ul class="dropdown-menu">
+  <ul class="dropdown-menu" id="area">
     <!-- dropdown menu links -->
+<%=Areas.getInstance().getArea() %>
+
   </ul>
 </div>
         
