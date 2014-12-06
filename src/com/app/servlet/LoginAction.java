@@ -44,7 +44,7 @@ public class LoginAction extends HttpServlet{
 				break;
 			case AppConstants.VALID_USER:
 				redirectPath = "home";
-				AppUtil.getUserForSession(email);
+				req.getSession().setAttribute("user", AppUtil.getUserForSession(email) );
 				break;
 		}
 		

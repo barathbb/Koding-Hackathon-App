@@ -2,6 +2,7 @@ package com.app.util;
 
 import java.sql.ResultSet;
 
+import com.app.component.User;
 import com.mysql.jdbc.PreparedStatement;
 
 public class AppUtil {
@@ -31,7 +32,7 @@ public class AppUtil {
 		return loginState;
 	}
 
-	public static void getUserForSession(String email) throws Exception{
+	public static User getUserForSession(String email) throws Exception{
 		
 		PreparedStatement pre = QueryUtil.getUserTableSelectWithEmailEquals(email);
 		
