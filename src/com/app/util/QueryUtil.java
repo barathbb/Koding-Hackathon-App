@@ -26,6 +26,14 @@ public class QueryUtil {
 		pre.setLong(1, postid);
 		return pre;
 	}
+
+	public static PreparedStatement getUpdatePostSetStatusWithPostID(int toStatus,
+			long postID) throws Exception {
+		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("update table posts set status = ? where postid = ?");
+		pre.setLong(2, postID);
+		pre.setInt(1, toStatus);
+		return pre;
+	}
 	
 
 }

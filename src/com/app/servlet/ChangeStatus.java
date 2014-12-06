@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.component.User;
+import com.app.util.AppUtil;
+import com.app.util.DBUtil;
 
 public class ChangeStatus extends HttpServlet {
 	
@@ -31,6 +33,8 @@ public class ChangeStatus extends HttpServlet {
 		
 		int toStatus = Integer.parseInt(req.getParameter("toStatus"));
 		
+		
+		AppUtil.updatePostStatus(loginUser, postID, toStatus);
 		
 		
 		}
