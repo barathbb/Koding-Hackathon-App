@@ -1,4 +1,3 @@
-/*$Id$*/
 package com.app.servlet;
 
 import java.io.IOException;
@@ -8,12 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.catalina.connector.Request;
+import com.app.util.AppUtil;
 
-/**
- * @author barath-2392
- *
- */
 public class LoginAction extends HttpServlet{
 
 	
@@ -30,6 +25,8 @@ public class LoginAction extends HttpServlet{
 		
 		String password = (String) req.getParameter("password");
 		
+		
+//		int userState = AppUtil.checkForUserAvailability(email,password);
 		
 		
 	}
