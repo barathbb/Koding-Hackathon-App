@@ -24,11 +24,7 @@
           <label for="description">Compliant Description</label>
     	<textarea class="form-control" rows="3"></textarea>
         </div>   
-        
-         <div class="form-group">
-          <label for="description">Upload Image</label>
-     <input type="file"  id="file">
-        </div> 
+       
         
         <div class="form-group">
           <label for="sel1">Department</label>
