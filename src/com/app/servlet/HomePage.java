@@ -37,7 +37,7 @@ public class HomePage extends HttpServlet {
 		
 		}
 		catch(Exception e){
-			
+			e.printStackTrace();
 		}
 		
 
