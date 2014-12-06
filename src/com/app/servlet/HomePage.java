@@ -2,15 +2,16 @@ package com.app.servlet;
 
 import java.io.IOException;
 import java.sql.ResultSet;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.app.util.DBUtil;
+import com.app.component.Post;
+import com.app.util.ComponentUtil;
 import com.app.util.QueryUtil;
-import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
 public class HomePage extends HttpServlet {
@@ -29,7 +30,10 @@ public class HomePage extends HttpServlet {
 		PreparedStatement pre = QueryUtil.getPostTable();
 		
 		ResultSet rs = pre.executeQuery();
+
+		List<Post> posts = ComponentUtil.fillPosts(rs);
 		
+		req.setAttribute("posts", posts);
 		
 		}
 		catch(Exception e){
