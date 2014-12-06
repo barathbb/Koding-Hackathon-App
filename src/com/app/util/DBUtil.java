@@ -13,12 +13,12 @@ public class DBUtil {
 			      Class.forName("com.mysql.jdbc.Driver");
 
 			      String DB_URL = "jdbc:mysql://localhost/KodingApp";
-			      String USER = "";
+			      String USER = "root";
 			      String PASS = "";
 			      
 			      System.out.println("Connecting to database...");
 			      conn = (Connection) DriverManager.getConnection(DB_URL,USER,PASS);
-
+			      
 			   }catch(Exception e){
 			      e.printStackTrace();
 			   }finally{
@@ -29,5 +29,17 @@ public class DBUtil {
 		return conn;
 	}
 	
-
+	protected static void closeConnection() throws Exception {
+		conn.close();
+	}
+	
+	public static void main(String[] args) throws Exception {
+		
+		System.out.println(getConnection().toString());
+		
+		closeConnection();
+		
+	}
+	
+	
 }
