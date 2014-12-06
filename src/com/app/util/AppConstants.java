@@ -2,9 +2,9 @@ package com.app.util;
 
 public class AppConstants {
 	
-	static final int EMAIL_NOT_EXIST = 1;
-	static final int WRONG_PASSW0RD = 2;
-	static final int VALID_USER = 3;
+	public static final int EMAIL_NOT_EXIST = 1;
+	public static final int WRONG_PASSW0RD = 2;
+	public static final int VALID_USER = 3;
 	
 	
 	public enum Users{
