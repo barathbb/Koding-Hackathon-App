@@ -51,7 +51,7 @@ public class Areas {
 		
 		String areaHTML="";
 		for(int i =0;i<areaString.size();i++)
-			areaHTML += "<li value='"+codeString.get(i)+"'>"+areaString.get(i)+"</li>";
+			areaHTML += "<option value='"+codeString.get(i)+"'>"+areaString.get(i)+"</pption>";
 		return areaHTML;
 	}
 	
