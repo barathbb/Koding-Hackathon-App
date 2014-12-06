@@ -54,6 +54,25 @@ public class QueryUtil {
 //		pre.setLong(1, status);
 		return pre;
 	}
+	
+	 /**Change query if needed to update**/
+	public static PreparedStatement getUpdateUserQuery(String username, String email, String password, String locality) throws Exception {
+		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("insert into users(UserName,EmailId,Password,Role,Locality) values (?,?,?,?,?)");
+		pre.setString(1, username);
+		pre.setString(3, password);
+		pre.setInt(4, Users.END_USER.getIntValue());/**Constant since only end users can create**/
+		pre.setString(5, locality);
+		pre.setString(2, email);
+//		pre.setLong(1, status);
+		return pre;
+	}
+	
+	public static PreparedStatement getUpdateUserQueryWithLocality(String locality, long userid) throws Exception {
+		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("update  Users set  Locality = ? where UserId = ?");
+		pre.setString(1, locality);
+		pre.setLong(2, userid);
+		return pre;
+	}
 
 	public static PreparedStatement getAddPostQuery(String title, String description, String image, String locality, long department, long ownerid) throws Exception {
 		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("insert into Posts(PostTitle,PostDescription,Image,Locality,Department,OwnerId, Status) values (?,?,?,?,?,?,?)");

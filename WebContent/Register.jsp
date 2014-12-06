@@ -12,7 +12,7 @@
 <h2>Registration Page</h2>
       <form role="form">
 
-      <form role="form" method="post">
+      <form role="form" method="post" action="/Register">
 
 	 <div class="form-group">
           <label for="text">User Name</label>
@@ -33,15 +33,15 @@
         
         
 
-<div class="form-group">
-          <label for="sel1">Choose Your Area</label>
-          <select class="form-control" id="area">
-           <%=Areas.getInstance().getArea() %>
-          </select>
-          
-</div>
+		<div class="form-group">
+		    <label for="sel1">Choose Your Area</label>
+		      <select class="form-control" id="area">
+		           <%=Areas.getInstance().getArea() %>
+		       </select>
+		</div>
+		
         <div class="form-group">
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default" name="register">Submit</button>
         </div>
       </form>
       </form>
@@ -49,6 +49,64 @@
       
     <script src="bootstrap/js/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    
+    $('#name').bind('blur',function(){
+    	
+    	var input = $(this);
+    	
+    	try{
+    	$.ajax({
+			url 		: "/CheckUserName",
+			type 		: 'GET',
+			beforeSend 	: function()
+						  {
+// 							this.data = "username=" + $(this).val();
+						  },
+			data		: 'username=' + $(this).val(),
+		    success		: function(response, status, xhr)
+		    			  {
+		    					console.log(response);
+		    	
+		    					if(response === "True")
+		    					{
+		    						$(input).css('border','2px green solid');
+		    					}
+		    					else
+		    					{
+		    						$(input).css('border','2px red solid');
+		    					}
+		    					
+// 						    	var newOpt = document.createElement('option');
+// 						    	var dataObj = toJSONObject(this.data);
+// 						    	$(newOpt).text(dataObj.name);
+// 								$(newOpt).val(response.TASK_NAME);
+// 								$(self.wrapper).parent().find('select[name=tasks]').append(newOpt);
+				
+// 		    					var newTaskRow = $(self.wrapper).find('.rules_associate_tasks .templaterow').clone();
+// 		    					$(newTaskRow).removeAttr('class').show().attr('id',response.TASK_NAME);
+// 		    					$(newTaskRow).find('input[type=checkbox]').attr('checked','checked').attr('id','task_'+response.TASK_NAME).next().attr('for','task_'+response.TASK_NAME);
+		    					
+// 		    					Events.updateDetailsOnTaskRow(newTaskRow, self.wrapper, dataObj);
+// 		    					$(self.wrapper).find('.rules_associate_tasks table tbody').append(newTaskRow);
+// 		    					if(Events.assoicateSelectedTasks())
+// 		    					{
+// 		    						Events.showAssociatedTasksList();
+// 		    					}
+// 		    					$(self.TB.taskBuilder).find('.task-setvalue').replaceWith($(cloneDiv).clone(true));
+// 		    					self.TB.usedFields = [];
+// 		    					Events.toggleAssociateTaskLink();
+		    			  }
+		});
+    	
+    	}
+    	catch(e){console.log(e);}
+    	
+    });
+    
+    
+    
+    </script>
 </body>
 
 </html>

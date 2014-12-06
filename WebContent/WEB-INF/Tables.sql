@@ -10,9 +10,9 @@ CREATE TABLE `KodingApp`.`Users` (
   `Locality` VARCHAR(32) NULL,
   PRIMARY KEY (`UserId`),
   UNIQUE INDEX `userId_UNIQUE` (`UserId` ASC),
+  UNIQUE INDEX `UserName_UNIQUE` (`UserName` ASC)
   UNIQUE INDEX `EmailId_UNIQUE` (`EmailId` ASC));
 
-  
 CREATE TABLE `KodingApp`.`Department` (
   `DepartmentId` INT NOT NULL AUTO_INCREMENT,
   `DepartmentName` VARCHAR(32) NULL,

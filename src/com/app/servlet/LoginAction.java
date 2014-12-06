@@ -12,7 +12,6 @@ import com.app.util.AppUtil;
 
 public class LoginAction extends HttpServlet{
 
-	
 	private static final long serialVersionUID = 1397927875698651728L;
 
 	/* (non-Javadoc)
@@ -21,7 +20,6 @@ public class LoginAction extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		super.doPost(req, resp);
 		
 		try{

@@ -18,10 +18,9 @@ public class CheckUserNameAction extends HttpServlet {
 	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		super.doPost(req, resp);
 		
 		String username = (String) req.getParameter("username");
 		
@@ -36,18 +35,9 @@ public class CheckUserNameAction extends HttpServlet {
 			
 		}
 		
+		resp.getWriter().write("True");
+		
 	}
 	
-	/* (non-Javadoc)
-	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
-	 */
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doGet(req, resp);
-		
-		doPost(req, resp);
-	}
 
 }
