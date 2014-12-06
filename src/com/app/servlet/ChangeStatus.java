@@ -29,8 +29,7 @@ public class ChangeStatus extends HttpServlet {
 		
 		User loginUser = (User) req.getSession().getAttribute("user");
 		
-		
-		
+		int toStatus = Integer.parseInt(req.getParameter("toStatus"));
 		
 		
 		
