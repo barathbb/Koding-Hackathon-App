@@ -27,5 +27,25 @@ public class AppConstants {
 		
 	}
 	
+	public enum PostState{
+		
+		CREATED(1),
+		REVIEWED(2),
+		ASSIGNED(3),
+		FINISHED(4),
+		CLOSED(5);
+		
+		private int state;
+		
+		private PostState(int state) {
+			this.state = state;
+		}
+		
+		public int getState(){
+			return state;
+		}
+		
+	}
+	
 	
 }
