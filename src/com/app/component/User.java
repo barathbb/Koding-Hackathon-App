@@ -5,6 +5,16 @@ public class User {
 	long userID;
 	
 	String email, displayName, locality, department;
+	
+	int role;
+	
+	public int getRole() {
+		return role;
+	}
+
+	public void setRole(int role) {
+		this.role = role;
+	}
 
 	public long getUserID() {
 		return userID;
