@@ -13,6 +13,10 @@ public class ComponentUtil {
 		
 		List<Post> posts = Collections.emptyList(); Post post = null;
 		
+		if(rs == null){
+			return posts;
+		}
+		
 		while(rs.next()){
 			
 			//Fill it here
@@ -25,9 +29,14 @@ public class ComponentUtil {
 	public static User fillUser(ResultSet rs) throws Exception {
 		User user = null;
 		
+		if(rs == null){
+			return new User();
+		}
+		
 		while(rs.next()){
 			
 			//Fill it here
+			
 			
 		}
 		
