@@ -1,3 +1,4 @@
+/*$Id$*/
 package com.app.servlet;
 
 import java.io.IOException;
@@ -10,9 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.util.QueryUtil;
 import com.mysql.jdbc.PreparedStatement;
 
-public class SignupAction extends HttpServlet {
-
-	private static final long serialVersionUID = -2844710545332872849L;
+/**
+ * @author barath-2392
+ *
+ */
+public class CheckEmailIdAction extends HttpServlet {
+	
+	private static final long serialVersionUID = -7111089485619118486L;
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
@@ -23,28 +28,18 @@ public class SignupAction extends HttpServlet {
 		// TODO Auto-generated method stub
 		super.doPost(req, resp);
 		
-		try{
-		String username = (String) req.getParameter("username");
-		
 		String email = (String) req.getParameter("email");
 		
-		String password = (String) req.getParameter("password");
+		try{
 		
-		String locality = (String) req.getParameter("locality");
+		PreparedStatement pre = QueryUtil.getUsersTableWithEmailIdEquals(email);
 		
-		PreparedStatement pre = QueryUtil.getAddUserQuery(username, email, password, locality);
+		boolean exists = pre.executeQuery() != null;
 		
-		if(pre.executeUpdate() > 0){
-			resp.sendRedirect("/home");
-		}
-		else
-		{
-			resp.sendRedirect("/error");
-		}
 		
 		}
 		catch(Exception e){
-			e.printStackTrace();
+			
 		}
 		
 	}
@@ -57,9 +52,9 @@ public class SignupAction extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doPost(req, resp);
+		super.doGet(req, resp);
 		
+		doPost(req, resp);
 	}
-	
-	
+
 }

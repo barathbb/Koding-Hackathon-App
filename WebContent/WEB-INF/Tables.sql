@@ -2,7 +2,7 @@
 
 CREATE TABLE `KodingApp`.`Users` (
   `UserId` INT NOT NULL AUTO_INCREMENT,
-  `DisplayName` VARCHAR(32) NULL,
+  `UserName` VARCHAR(32) NULL,
   `EmailId` VARCHAR(64) NULL,
   `Password` VARCHAR(32) NULL,
   `Role` INT UNSIGNED NOT NULL,

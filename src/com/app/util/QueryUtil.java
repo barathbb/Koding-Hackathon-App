@@ -28,8 +28,7 @@ public class QueryUtil {
 		return pre;
 	}
 
-	public static PreparedStatement getUpdatePostSetStatusWithPostID(int toStatus,
-			long postID) throws Exception {
+	public static PreparedStatement getUpdatePostSetStatusWithPostID(int toStatus, long postID) throws Exception {
 		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("update table posts set status = ? where postid = ?");
 		pre.setLong(2, postID);
 		pre.setInt(1, toStatus);
@@ -43,7 +42,7 @@ public class QueryUtil {
 	}
 
 	public static PreparedStatement getAddUserQuery(String username, String email, String password, String locality) throws Exception {
-		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("insert into users(DisplayName,EmailId,Password,Role,Locality) values (?,?,?,?,?)");
+		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("insert into users(UserName,EmailId,Password,Role,Locality) values (?,?,?,?,?)");
 		pre.setString(1, username);
 		pre.setString(3, password);
 		pre.setInt(4, Users.END_USER.getIntValue());
@@ -52,6 +51,17 @@ public class QueryUtil {
 //		pre.setLong(1, status);
 		return pre;
 	}
-	
+
+	public static PreparedStatement getUsersTableWithUserNameEquals(String username)  throws Exception {
+		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("select * from users where UserName = ?");
+		pre.setString(1, username);
+		return pre;
+	}
+
+	public static PreparedStatement getUsersTableWithEmailIdEquals(String email)  throws Exception {
+		PreparedStatement pre = (PreparedStatement) DBUtil.getConnection().prepareStatement("select * from users where EmailId = ?");
+		pre.setString(1, email);
+		return pre;
+	}
 
 }
