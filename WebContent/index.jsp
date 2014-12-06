@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,6 @@
     <div class="container">
 
       <h2>Login Page</h2>
-      <form role="form">
 
       <form role="form" method="post">
 

@@ -4,8 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
-import com.mysql.jdbc.PreparedStatement;
-
 public class DBUtil {
 	
 	private static Connection conn;
@@ -54,10 +52,8 @@ public class DBUtil {
 			   System.out.println("Goodbye!");
 	}
 	
-	public static Connection getConnection(){
+	protected static Connection getConnection(){
 		return conn;
 	}
-
-	
 
 }

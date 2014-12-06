@@ -9,12 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.component.User;
 import com.app.util.AppUtil;
-import com.app.util.DBUtil;
 
 public class ChangeStatus extends HttpServlet {
 	
 	private static final long serialVersionUID = -3038202029405029508L;
-
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
@@ -33,9 +31,7 @@ public class ChangeStatus extends HttpServlet {
 		
 		int toStatus = Integer.parseInt(req.getParameter("toStatus"));
 		
-		
 		AppUtil.updatePostStatus(loginUser, postID, toStatus);
-		
 		
 		}
 		catch(Exception e){
