@@ -37,7 +37,12 @@ public class ComponentUtil {
 			
 			//Fill it here
 			
-			
+			user.setDepartment(rs.getString("department"));
+			user.setDisplayName(rs.getString("displayName"));
+			user.setRole(rs.getInt("role"));
+			user.setEmail(rs.getString("email"));
+			user.setUserID(rs.getLong("userId"));
+			user.setLocality(rs.getString("locality"));
 		}
 		
 		return user;
