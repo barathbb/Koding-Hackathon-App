@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Sample Project">
+    <wb-module deploy-name="Koding Hackathon Webapp">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <property name="context-root" value="Sample_Project"/>
-        <property name="java-output-path" value="/Sample Project/build/classes"/>
+        <property name="java-output-path" value="/Koding Hackathon Webapp/build/classes"/>
     </wb-module>
 </project-modules>
