@@ -28,6 +28,7 @@ public class Areas {
 	
 	private void load() throws FileNotFoundException, IOException{
 		areaString = new ArrayList();
+		codeString = new ArrayList();
 		File directory = new File (".");
 	
 	//	FileReader fr = new FileReader("../WebContent/WEB-INF/Areas.txt"); 
@@ -37,7 +38,9 @@ public class Areas {
 		while((s = br.readLine()) != null) { 
 			areaString.add(s.substring(0, s.indexOf("-")-1)); 
 		} 
-
+	fis = getClass().getResourceAsStream("Areas.txt");
+	br = new BufferedReader(new InputStreamReader(fis)); 
+		
 		while((s = br.readLine()) != null) { 
 			codeString.add(s.substring(s.lastIndexOf("-")+2)); 
 			} 
