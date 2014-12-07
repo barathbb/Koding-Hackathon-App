@@ -2,8 +2,8 @@
     <wb-module deploy-name="Sample Project">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-<!--         <property name="context-root" value="Sample_Project"/> -->
-		<property name="context-root" value="KodingApp"/>
+        <property name="context-root" value="Sample_Project"/>
+<!-- 		<property name="context-root" value="KodingApp"/> -->
         <property name="java-output-path" value="/Sample Project/build/classes"/>
     </wb-module>
 </project-modules>
